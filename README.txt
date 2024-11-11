@@ -1,5 +1,5 @@
 Steps to Create a MySQL Database (data) and Connect It to Your Django Project
-1. Install WampServer
+**1. Install WampServer**
 Download: Go to the official WampServer website: Download WampServer.
 Install: Run the downloaded installer and follow the on-screen instructions.
 Start WampServer: After installation, click the WampServer icon to start the services. You should see a green icon in your system tray, which means WampServer is running.
