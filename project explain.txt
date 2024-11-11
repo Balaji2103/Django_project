@@ -1,10 +1,10 @@
 Steps to Create a MySQL Database (data) and Connect It to Your Django Project
-## **1. Install WampServer**
+1. Install WampServer
 Download: Go to the official WampServer website: Download WampServer.
 Install: Run the downloaded installer and follow the on-screen instructions.
 Start WampServer: After installation, click the WampServer icon to start the services. You should see a green icon in your system tray, which means WampServer is running.
 Verify: Open your web browser and go to http://localhost/ to ensure WampServer is running. If you see the WampServer homepage, you're good to go.
-## **2. Create the data Database in MySQL**
+2. Create the data Database in MySQL
 WampServer includes phpMyAdmin, a web interface to manage MySQL databases. Here’s how you can create the data database.
 
 a. Access phpMyAdmin:
@@ -20,7 +20,7 @@ Choose the Collation: You can leave it as utf8_general_ci (default).
 Click Create to create the data database.
 The database data is now ready to be used in your Django project.
 
-## **##3. Configure Django to Use MySQ**
+3. Configure Django to Use MySQ
 Now, let’s configure your Django project to use the data MySQL database.
 
 a. Open settings.py:
@@ -53,7 +53,7 @@ If you face issues installing mysqlclient, you can use the mysql-connector-pytho
 bash
 Copy code
 pip install mysql-connector-python
-## **4. Run Django Migrations**
+4. Run Django Migrations
 Now that Django is configured to use MySQL, you need to run the migrations to create the necessary tables in your data database.
 
 a. Run Migrations:
@@ -64,7 +64,7 @@ Copy code
 python manage.py migrate
 This will apply all the default migrations and create tables in the data database.
 
-## **5. Start the Django Development Server**
+5. Start the Django Development Server
 You can now start the Django development server to test if everything is working.
 
 a. Start the Server:
@@ -74,13 +74,13 @@ python manage.py runserver
 b. Test the Project:
 Open your web browser and go to http://127.0.0.1:8000. You should see your Django project running, and it's now connected to the data MySQL database.
 
-## **6. Verify Database in phpMyAdmin (Optional)**
+6. Verify Database in phpMyAdmin (Optional)
 If you want to verify that Django is using the data database, follow these steps:
 
 Go back to http://localhost/phpmyadmin in your browser.
 In the left sidebar, you should now see the data database.
 Click on the data database, and you will see all the tables that Django created (like auth_user, django_session, etc.).
-## **7. (Optional) Create a Superuser for Admin Access**
+7. (Optional) Create a Superuser for Admin Access
 If you want to access the Django admin panel, you’ll need to create a superuser account:
 
 bash
