@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="row justify-content-center">
+            <div class="col-md-offset-4 col-lg-4">
+                <h2 class="text-center text-primary page-center">
+                    <i class="fa fa-users"></i> Registration Page
+                </h2>
+                <form method="POST" autocomplete="off" class="mt-4 p-4 border rounded shadow-sm bg-white">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" class="btn btn-primary btn-block" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
